@@ -1,13 +1,13 @@
-# Demo with log sggregation
+# Demo with log aggregation
 * [ELK stack](https://www.elastic.co)
   * Elasticseach
   * Logstash
   * Kibana
 
-## Start server with zipkin
+## Start log process
 ```
 $npm install
-$EXPORTER=zipkin node service.js
+$node test_log.js
 ```
 
 ## Start [ELK stack with Docker compose](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
@@ -31,7 +31,3 @@ elk-setup-1         "/bin/tini -- /usr/l…"   setup               exited (0)
 
 Open url in browser
 * Kibana = http://localhost:5601
-
-
-### Reference Websites
-* [OpemTelemetry for NodeJS](https://opentelemetry.io/docs/instrumentation/js/getting-started/nodejs/)
