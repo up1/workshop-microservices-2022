@@ -14,8 +14,33 @@ $node service.js
   * Login failure = http://localhost:3000/login?name=not_ok
 * Call metric url with http://localhost:3000/metrics
 
-## Start Redis with Docker
+## Start Prometheus server
+Edit file `prometheus.yml`
 ```
-$docker container run -d  -p 6379:6379 redis:7.0.5
-$docker container run -d  -p 7379:6379 redis:7.0.5
+scrape_configs:
+  - job_name: 'service'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['ip:3000']
+        labels:
+          service: 'my-service'
+          group: 'production'
 ```
+
+Start container
+```
+$docker container run -d -p 9090:9090 \
+  -v $(pwd)/prometheus-data:/prometheus-data prom/prometheus \
+  --config.file=/prometheus-data/prometheus.yml
+```
+
+Open url=http://localhost:9090 in browser
+
+## Start Grafana server
+```
+$docker container run -d -p 3000:3000 grafana/grafana
+```
+
+Open url=http://localhost:3000 in browser
+* username=admin
+* password=admin
