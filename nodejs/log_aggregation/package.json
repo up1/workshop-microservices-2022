@@ -1,0 +1,15 @@
+{
+  "name": "log_aggregation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "up1",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.8.2",
+    "winston3-logstash-transport": "^1.2.3"
+  }
+}
