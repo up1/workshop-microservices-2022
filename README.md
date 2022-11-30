@@ -12,8 +12,31 @@
 * [Docker compose](https://docs.docker.com/compose/)
 
 ## Topics
+* Communication
+  * Synchronous
+  * Asynchronous
+
+* External API
+  * API Gateway
+
 * Observability
   * Health check
   * Application metric
   * Distributed tracing
   * Log aggregation
+
+* Testing
+  * Component testing
+  * Contract testing
+
+* Resilience patterns
+  * Retry
+  * Circuit Breaker
+  * Timeout
+  * Bulkhead
+  * Cache
+  * Fallback
+
+
+## Reference websites
+* [Application resiliency patterns](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/application-resiliency-patterns)
