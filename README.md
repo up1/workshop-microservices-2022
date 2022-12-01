@@ -25,7 +25,7 @@
   * Distributed tracing
   * Log aggregation
 
-* Testing
+* [Testing](https://github.com/up1/course-contract-testing)
   * Component testing
   * Contract testing
 
