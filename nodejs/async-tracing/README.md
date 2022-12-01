@@ -1,5 +1,6 @@
 # Workshop with Asynchronous communication
 * [RabbitMQ](https://www.rabbitmq.com/)
+  * Topic/Fanout
 * Tracing
   * OpenTelemetry
   * Jaeger
