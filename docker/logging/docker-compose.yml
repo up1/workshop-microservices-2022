@@ -1,0 +1,19 @@
+version: '3'
+services:
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.5.2
+    ports:
+      - "12201:12201/udp"
+      - "5044:5044"
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+
+  demo_app:
+    image: alpine
+    logging:
+      driver: gelf
+      options:
+        gelf-address: udp://host.docker.internal:12201
+        tag: "staging"
+    command: /bin/sh -c "while true; do echo My log `date`; sleep 1; done;"
