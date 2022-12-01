@@ -1,5 +1,5 @@
 # Demo logging with Docker
-* Docker logging driver = gelf
+* Docker logging driver = [gelf](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-gelf.html)
 * Use Logstash
 
 ## Step 1 :: Start Logstash
