@@ -1,0 +1,21 @@
+{
+  "name": "async-tracing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "up1",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/exporter-jaeger": "^1.8.0",
+    "@opentelemetry/instrumentation-amqplib": "^0.32.0",
+    "@opentelemetry/instrumentation-http": "^0.34.0",
+    "@opentelemetry/sdk-node": "^0.34.0",
+    "@opentelemetry/sdk-trace-base": "^1.8.0",
+    "amqplib": "^0.10.3",
+    "express": "^4.18.2",
+    "opentelemetry-instrumentation-express": "^0.34.0"
+  }
+}
