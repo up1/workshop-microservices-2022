@@ -15,13 +15,17 @@ $docker container run -d --name rabbit \
 	rabbitmq:3-management
 ```
 
+Open URL= http://localhost:15672 in web browser
+
 ## Step 2 :: Start service 1 as publisher/producer
 ```
+$npm install
 $SERVICE=service_1 node --require './tracing.js' service_1.js
 ```
 
 ## Step 3 :: Start service 2 and 3 as subscriber/consumer
 ```
+$npm install
 $SERVICE=service_2 node --require './tracing.js' service_2.js
 
 $SERVICE=service_3 node --require './tracing.js' service_2.js
