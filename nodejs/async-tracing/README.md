@@ -27,7 +27,7 @@ $SERVICE=service_2 node --require './tracing.js' service_2.js
 $SERVICE=service_3 node --require './tracing.js' service_2.js
 ```
 
-## Step 3 :: Start Jaeger server
+## Step 4 :: Start Jaeger server
 ```
 $docker container run -d --name jaeger \
   -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
@@ -48,7 +48,7 @@ $docker container run -d --name jaeger \
 Open URL= http://localhost:16686 in web browser
 
 
-## Step 4 :: Send data to service 1
+## Step 5 :: Send data to service 1
 ```
 $curl http://localhost:3000
 ```
