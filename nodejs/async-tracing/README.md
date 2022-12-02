@@ -11,25 +11,24 @@ $docker container run -d --name rabbit \
 	-e RABBITMQ_DEFAULT_USER=user \
 	-e RABBITMQ_DEFAULT_PASS=password \
 	-p 15672:15672 \
-    -p 5672:5672 \
+        -p 5672:5672 \
 	rabbitmq:3-management
 ```
 
+Open URL= http://localhost:15672 in web browser
+
 ## Step 2 :: Start service 1 as publisher/producer
 ```
+$npm install
 $SERVICE=service_1 node --require './tracing.js' service_1.js
 ```
 
 ## Step 3 :: Start service 2 and 3 as subscriber/consumer
 ```
+$npm install
 $SERVICE=service_2 node --require './tracing.js' service_2.js
 
 $SERVICE=service_3 node --require './tracing.js' service_2.js
-```
-
-## Step 3 :: Send data to service 1
-```
-$curl http://localhost:3000
 ```
 
 ## Step 4 :: Start Jaeger server
@@ -51,3 +50,9 @@ $docker container run -d --name jaeger \
 ```
 
 Open URL= http://localhost:16686 in web browser
+
+
+## Step 5 :: Send data to service 1
+```
+$curl http://localhost:3000
+```
