@@ -1,5 +1,8 @@
 # Demo [logging with Docker](https://docs.docker.com/config/containers/logging/configure/#supported-logging-drivers)
-* Docker logging driver = [gelf](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-gelf.html)
+* Docker logging driver = [gelf](https://docs.docker.com/config/containers/logging/gelf/)
+  * Graylog
+  * Logstash
+  * Fluentd 
 * Use Logstash
 
 ## Step 1 :: Start Logstash
