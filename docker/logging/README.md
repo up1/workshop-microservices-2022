@@ -1,4 +1,4 @@
-# Demo logging with Docker
+# Demo [logging with Docker](https://docs.docker.com/config/containers/logging/configure/#supported-logging-drivers)
 * Docker logging driver = [gelf](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-gelf.html)
 * Use Logstash
 
