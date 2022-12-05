@@ -2,7 +2,7 @@ scrape_configs:
   - job_name: 'service'
     scrape_interval: 5s
     static_configs:
-      - targets: ['ip:3000']
+      - targets: ['host.docker.internal:3000']
         labels:
           service: 'my-service'
           group: 'production'
