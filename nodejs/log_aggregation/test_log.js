@@ -16,6 +16,7 @@ let interval = 1000 * 2;
 
 log = () => {
   let i = 0;
+  console.log("Write log ...");
   logger.debug({
     someMeta: "someData",
     array: [1, 2, 3],
