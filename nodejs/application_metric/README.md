@@ -21,7 +21,7 @@ scrape_configs:
   - job_name: 'service'
     scrape_interval: 5s
     static_configs:
-      - targets: ['ip:3000']
+      - targets: ['host.docker.internal:3000']
         labels:
           service: 'my-service'
           group: 'production'
@@ -38,7 +38,7 @@ Open url=http://localhost:9090 in browser
 
 ## Start Grafana server
 ```
-$docker container run -d -p 3000:3000 grafana/grafana
+$docker container run -d -p 3001:3000 grafana/grafana-oss
 ```
 
 Open url=http://localhost:3000 in browser
