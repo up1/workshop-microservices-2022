@@ -1,0 +1,8 @@
+version: "3"
+services:
+  user_service:
+    build:
+      context: ./user_service
+      dockerfile: Dockerfile
+    ports:
+      - 8888:80
