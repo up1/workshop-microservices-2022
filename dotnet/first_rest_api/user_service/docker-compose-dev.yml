@@ -1,0 +1,8 @@
+version: "3"
+services:
+  user_service:
+    build:
+      context: ./user_service
+      dockerfile: Dockerfile_dev
+    ports:
+      - 5000:5000

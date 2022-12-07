@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS=http://0.0.0.0:5000
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+WORKDIR /src
+COPY . .
+RUN dotnet restore
+RUN dotnet build
+ENTRYPOINT ["dotnet", "run", "--no-build", "--no-launch-profile"]
