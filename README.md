@@ -6,6 +6,7 @@
 ## Programming language
 * [NodeJS](https://nodejs.org/)
 * [Go](https://go.dev/)
+* C# with .Net 6
 
 ## Software
 * [Docker](https://www.docker.com/)
