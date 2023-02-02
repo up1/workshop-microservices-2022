@@ -6,3 +6,11 @@ scrape_configs:
         labels:
           service: 'my-service'
           group: 'production'
+  - job_name: 'service java'
+    scrape_interval: 5s
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['host.docker.internal:8080']
+        labels:
+          service: 'java-service'
+          group: 'production'
