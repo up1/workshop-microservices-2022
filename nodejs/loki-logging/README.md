@@ -1,4 +1,4 @@
-# Demo loggin with Loki + Grafana
+# Demo logging with Loki + Grafana
 * NodeJS
   * express
   * winston, winston-loki
