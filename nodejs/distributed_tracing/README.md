@@ -53,5 +53,29 @@ $docker container run -d --name jaeger \
 Open url=http://localhost:16686 in browser
 
 
+## Config Tracing ให้ trace แค่ request บางส่วนอย่างไร ?
+* [Sampling in OpenTelemetry](https://opentelemetry.io/docs/instrumentation/js/sampling/)
+
+### Solution 1 :: Environment variables
+
+Data sample = 10%
+```
+export OTEL_TRACES_SAMPLER="traceidratio"
+export OTEL_TRACES_SAMPLER_ARG="0.1"
+```
+
+### Solution 2 :: Coding in tracer.js
+```
+const { TraceIdRatioBasedSampler } = require('@opentelemetry/sdk-trace-node');
+const samplePercentage = 0.1;
+
+const provider = new NodeTracerProvider({
+  sampler: new TraceIdRatioBasedSampler(samplePercentage),
+  resource: new Resource({
+    [SemanticResourceAttributes.SERVICE_NAME]: serviceName,
+  }),
+});
+```
+
 ### Reference Websites
 * [OpemTelemetry for NodeJS](https://opentelemetry.io/docs/instrumentation/js/getting-started/nodejs/)

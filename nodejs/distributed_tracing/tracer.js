@@ -12,10 +12,14 @@ const { JaegerExporter } = require("@opentelemetry/exporter-jaeger");
 const { ZipkinExporter } = require("@opentelemetry/exporter-zipkin");
 const { HttpInstrumentation } = require("@opentelemetry/instrumentation-http");
 
+const { TraceIdRatioBasedSampler } = require('@opentelemetry/sdk-trace-node');
+const samplePercentage = 0.1;
+
 const EXPORTER = process.env.EXPORTER || "";
 
 module.exports = (serviceName) => {
   const provider = new NodeTracerProvider({
+    sampler: new TraceIdRatioBasedSampler(samplePercentage),
     resource: new Resource({
       [SemanticResourceAttributes.SERVICE_NAME]: serviceName,
     }),
