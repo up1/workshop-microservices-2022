@@ -4,7 +4,25 @@
   * Logstash
   * Kibana
 
-## Start log process
+## Best practices for Logging
+* Structured logging (JSON)
+* Build meaning and context into log message (timestamp, service name, user request, unique identifier)
+* Avoid non-essential or sensitive data
+* Aggregate and centralize log
+* Indexing logs for query and analytic
+* Optimize log retention policy
+* Monitoring and alert from logs
+
+## Workshop :: Distributed tracing and logging
+* [Winston](https://www.npmjs.com/package/winston)
+* [OpenTelemetry instrumentation for winston](https://www.npmjs.com/package/@opentelemetry/instrumentation-winston)
+```
+$npm install
+$EXPORTER=zipkin node service.js
+```
+Test with url = http://localhost:3000/test
+
+## Start log process with ELK stack
 ```
 $npm install
 $node test_log.js
