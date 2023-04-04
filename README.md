@@ -4,7 +4,7 @@
 * Deploy
 
 ## Programming language
-* [NodeJS](https://nodejs.org/)
+* [NodeJS](https://github.com/up1/workshop-microservices-2022/tree/main/nodejs)
 * Go
 * Java and Spring Boot
 * C# with .Net 6
