@@ -1,4 +1,4 @@
-## Step 1 :: Start service registry (consul)
+## Step 1 :: Start service registry with [consul](https://www.consul.io/)
 ```
 $docker container run --rm --name=consul -p 8500:8500 consul
 
