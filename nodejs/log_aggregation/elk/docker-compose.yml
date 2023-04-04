@@ -94,9 +94,6 @@ services:
       retries: 120
 
   kibana:
-    depends_on:
-      es01:
-        condition: service_healthy
     image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
     volumes:
       - certs:/usr/share/kibana/config/certs
