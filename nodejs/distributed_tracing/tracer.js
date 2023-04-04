@@ -24,6 +24,9 @@ module.exports = (serviceName) => {
   let exporter;
   if (EXPORTER.toLowerCase().startsWith("z")) {
     exporter = new ZipkinExporter();
+    // exporter = new ZipkinExporter({
+    //   url: 'http://zipkin:9411/api/v2/spans'
+    // });
   } else {
     exporter = new JaegerExporter();
   }
