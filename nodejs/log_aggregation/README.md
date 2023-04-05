@@ -4,6 +4,9 @@
   * Logstash
   * Kibana
 
+* Issue :: [Using the Docker images in productionedit](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-prod-prerequisites)
+
+
 ## Best practices for Logging
 * Structured logging (JSON)
 * Build meaning and context into log message (timestamp, service name, user request, unique identifier)
