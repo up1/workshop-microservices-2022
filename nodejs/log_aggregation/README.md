@@ -4,7 +4,7 @@
   * Logstash
   * Kibana
 
-* Issue :: [Using the Docker images in productionedit](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-prod-prerequisites)
+* Issue :: [Using the Docker images in production](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-prod-prerequisites)
 
 
 ## Best practices for Logging
